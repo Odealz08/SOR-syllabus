@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studies of Religion | Year 12 HSC Study Garden</title>
+<style>
+:root{--accent:#d0a632;--accent-dark:#8a6b13;--bg:#fffdf0;--card:#fffef8;--soft:#fff5c9;--ink:#494126;--muted:#827858;--line:#eee1a7;--shadow:0 10px 28px rgba(138,107,19,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#fff9d9 0,#fffef7 340px,var(--bg) 100%);color:var(--ink);font-family:ui-rounded,"Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.6}
+header{padding:43px 20px 28px;text-align:center;position:relative;overflow:hidden}header:before,header:after{content:"✿";position:absolute;color:#e7d681;opacity:.6;font-size:72px}header:before{left:7%;top:12px;transform:rotate(-18deg)}header:after{right:8%;bottom:0;transform:rotate(20deg)}
+.eyebrow{color:var(--accent-dark);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero-title{font-family:Georgia,serif;font-size:clamp(2.15rem,7vw,3.9rem);line-height:1.12;margin:8px 0;color:#8a6b13}.hero-sub{max-width:680px;margin:12px auto;color:var(--muted);font-size:1.02rem}
+main{width:min(980px,calc(100% - 28px));margin:0 auto 50px}.notice{padding:13px 16px;border:1px solid #ead78b;background:#fff9dc;border-radius:14px;color:#74601c;font-size:.9rem;margin:0 0 18px}.progress-card,.focus-card,.note-card,.selector-card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.progress-card,.selector-card{padding:19px 22px;margin-bottom:17px}.progress-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.progress-top h2{font-size:1.05rem;margin:0}.progress-number{font-weight:800;color:var(--accent-dark)}.track{height:11px;border-radius:999px;background:#f7edc5;overflow:hidden;margin-top:12px}.fill{height:100%;width:0;background:linear-gradient(90deg,#f0d86d,#d0a632);border-radius:999px;transition:width .25s}.progress-caption{font-size:.83rem;color:var(--muted);margin-top:8px}
+.selector-card h2{font-size:1.05rem;margin:0 0 5px}.selector-card p{margin:0 0 13px;color:var(--muted);font-size:.9rem}.course-options{display:flex;gap:9px;flex-wrap:wrap}.course-btn{border:1px solid var(--line);background:#fffef8;color:var(--accent-dark);padding:10px 16px;border-radius:12px;font-weight:800;cursor:pointer;font:inherit}.course-btn.active{background:#f9edb8;border-color:#d8b849;box-shadow:inset 0 0 0 1px #d8b849}.course-hint{font-size:.83rem;color:var(--muted);margin-top:10px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}.toolbar button{border:1px solid var(--line);background:#fffef8;color:var(--accent-dark);padding:9px 13px;border-radius:12px;font-weight:700;cursor:pointer;font:inherit;font-size:.88rem}.toolbar button:hover,.course-btn:hover{background:var(--soft)}
+.focus-card{margin:16px 0;overflow:hidden}.focus-head{width:100%;border:0;background:linear-gradient(110deg,#fff4c7,#fffdf3);display:flex;align-items:center;text-align:left;gap:14px;padding:18px 20px;cursor:pointer;color:var(--ink)}.focus-icon{font-size:1.8rem;flex-shrink:0}.focus-heading{flex:1}.focus-heading strong{display:block;font-family:Georgia,serif;font-size:1.25rem;color:#8a6b13}.focus-heading small{color:var(--muted)}.chevron{font-size:1.25rem;color:var(--accent-dark);transition:transform .2s}.focus-card.closed .chevron{transform:rotate(-90deg)}.focus-content{padding:4px 22px 22px}.intro{color:var(--muted);font-size:.94rem;margin:12px 0}.subhead{margin:20px 0 8px;font-size:.9rem;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.07em}.checklist{display:grid;gap:7px}.checkrow{display:flex;gap:11px;align-items:flex-start;padding:10px 12px;border:1px solid #f2e9c7;border-radius:12px;background:#fffef9;cursor:pointer}.checkrow:hover{border-color:#dfca70}.checkrow input{accent-color:var(--accent);width:17px;height:17px;margin-top:4px;flex-shrink:0}.checkrow span{flex:1}.checkrow input:checked+span{color:#9a9275;text-decoration:line-through;text-decoration-color:#c9b66c}.note-card{padding:18px 20px;margin-top:20px}.note-card h3{font-family:Georgia,serif;margin:0 0 8px;color:#8a6b13}.note-card p{margin:6px 0;color:var(--muted);font-size:.92rem}.case-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}.case-inputs label{display:block;font-size:.84rem;font-weight:700;color:var(--accent-dark)}.case-inputs input,.case-inputs textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fffefa;color:var(--ink);font:inherit;margin-top:5px}.case-inputs textarea{min-height:70px;resize:vertical}footer{text-align:center;color:var(--muted);font-size:.82rem;padding:20px}
+@media(max-width:600px){header{padding-top:34px}header:before{left:-10px}header:after{right:-10px}.focus-content{padding:4px 14px 18px}.progress-card,.selector-card{padding:17px}.focus-head{padding:15px}.focus-heading strong{font-size:1.1rem}}
+@media print{body{background:#fff}.toolbar,.selector-card{display:none}.focus-card,.progress-card,.note-card{box-shadow:none;break-inside:avoid}.focus-card.closed .focus-content{display:block}.focus-card.closed .chevron{display:none}header{padding:20px}main{width:100%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Year 12 · NSW HSC</div>
+  <h1 class="hero-title">Studies of Religion</h1>
+  <p class="hero-sub">A calm little space to track your HSC revision 🌼 Explore religious expression in Australia, your chosen religious traditions, and the big questions around meaning, peace and belief.</p>
+</header>
+<main>
+  <div class="notice"><strong>Quick syllabus note:</strong> This tracker is for Studies of Religion I (1 unit), based on the Studies of Religion Stage 6 syllabus document you provided (updated 2009). Confirm your school’s selected religious traditions and any class-specific requirements with your teacher. <a href="https://curriculum.nsw.edu.au/stages/senior" target="_blank" rel="noopener" style="color:#8a6b13;font-weight:700">Check NESA syllabus status ↗</a></div>
+
+  <section class="progress-card" aria-label="Study progress">
+    <div class="progress-top"><h2>🌼 Your syllabus progress</h2><span class="progress-number" id="progressText">0% complete</span></div>
+    <div class="track"><div class="fill" id="progressFill"></div></div>
+    <div class="progress-caption" id="progressCaption">Every tick is a step forward. You've got this!</div>
+  </section>
+  <div class="toolbar">
+    <button type="button" id="expandBtn">＋ Expand all</button><button type="button" id="collapseBtn">－ Collapse all</button><button type="button" id="printBtn">🖨️ Print / save PDF</button><button type="button" id="resetBtn">↻ Reset checklist</button>
+  </div>
+
+  <section class="focus-card" data-course="both" id="australia">
+    <button class="focus-head" type="button" aria-expanded="true"><span class="focus-icon">🇦🇺</span><span class="focus-heading"><strong>Religion and belief systems in Australia post-1945</strong><small>16 indicative hours · SOR I</small></span><span class="chevron">⌄</span></button>
+    <div class="focus-content">
+      <p class="intro">Explore religious expression in Australia's multicultural and multifaith society since 1945, including Aboriginal spiritualities and their place in contemporary Australia.</p>
+      <div class="subhead">Contemporary Aboriginal spiritualities</div><div class="checklist">
+        <label class="checkrow"><input type="checkbox" data-id="a1"><span>Explain how Aboriginal spirituality is connected with the Dreaming, including kinship, ceremonial life and obligations to land and people.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="a2"><span>Explain continuing impacts of dispossession, including separation from Country and kinship groups and the Stolen Generations.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="a3"><span>Revise the importance of Native Title, Mabo and Wik in the Land Rights movement.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="a4"><span>Analyse the significance of the Dreaming and Land Rights for Aboriginal spiritualities.</span></label>
+      </div>
+      <div class="subhead">Religious expression in Australia since 1945</div><div class="checklist">
+        <label class="checkrow"><input type="checkbox" data-id="a5"><span>Describe changing patterns in Australia's religious landscape using Census data and other relevant statistics.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="a6"><span>Explain the impact of immigration and multiculturalism on religious diversity in Australia.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="a7"><span>Explain the effects of secularisation, denominational switching and new religious expressions.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="a8"><span>Describe interfaith dialogue and ecumenical movements and evaluate their significance in Australia.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="a9"><span>Use accurate data and examples to explain how religion is expressed in contemporary Australian society.</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="focus-card" data-course="both" id="depth1">
+    <button class="focus-head" type="button" aria-expanded="true"><span class="focus-icon">📚</span><span class="focus-heading"><strong>Religious Tradition Depth Study 1</strong><small>22 indicative hours · SOR I</small></span><span class="chevron">⌄</span></button>
+    <div class="focus-content">
+      <p class="intro">Use the tradition selected by your school. The syllabus recognises Buddhism, Christianity, Hinduism, Islam and Judaism as the five major religious traditions.</p>
+      <div class="subhead">Beliefs, ethics and practice</div><div class="checklist">
+        <label class="checkrow"><input type="checkbox" data-id="d1a"><span>Explain the principal beliefs and key teachings of your chosen religious tradition.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d1b"><span>Explain how the tradition responds to enduring questions about human existence and ultimate meaning.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d1c"><span>Describe and analyse the significance of a major practice and how it is expressed by adherents.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d1d"><span>Explain ethical teachings and how they guide adherents' choices and behaviour.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d1e"><span>Study a significant person or school of thought and evaluate their influence on the tradition.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d1f"><span>Prepare specific examples, quotations or source references and explain their significance.</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="focus-card" data-course="both" id="depth2">
+    <button class="focus-head" type="button" aria-expanded="true"><span class="focus-icon">🕯️</span><span class="focus-heading"><strong>Religious Tradition Depth Study 2</strong><small>22 indicative hours · SOR I</small></span><span class="chevron">⌄</span></button>
+    <div class="focus-content">
+      <p class="intro">Apply the same depth-study approach to your second selected tradition. Confirm the exact tradition and syllabus focus with your teacher.</p>
+      <div class="checklist">
+        <label class="checkrow"><input type="checkbox" data-id="d2a"><span>Explain the principal beliefs and key teachings of your second chosen religious tradition.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d2b"><span>Explain the tradition's response to enduring questions about human existence and ultimate meaning.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d2c"><span>Describe and analyse the significance of a major practice and its expression in adherents' lives.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d2d"><span>Explain ethical teachings and how they influence personal and community behaviour.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d2e"><span>Study a significant person or school of thought and assess their influence.</span></label>
+        <label class="checkrow"><input type="checkbox" data-id="d2f"><span>Practise comparing this tradition with your first study using accurate terminology and evidence.</span></label>
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+  
+
+  <section class="focus-card" data-course="both" id="skills">
+    <button class="focus-head" type="button" aria-expanded="true"><span class="focus-icon">✍️</span><span class="focus-heading"><strong>Research skills and HSC exam practice</strong><small>Use across all focus areas</small></span><span class="chevron">⌄</span></button>
+    <div class="focus-content"><div class="checklist">
+      <label class="checkrow"><input type="checkbox" data-id="s1"><span>Use appropriate religious terminology and explain key concepts accurately.</span></label>
+      <label class="checkrow"><input type="checkbox" data-id="s2"><span>Gather and organise information from a variety of credible sources.</span></label>
+      <label class="checkrow"><input type="checkbox" data-id="s3"><span>Evaluate sources for usefulness, validity, bias and reliability.</span></label>
+      <label class="checkrow"><input type="checkbox" data-id="s4"><span>Support claims with accurate examples, teachings, sources and evidence.</span></label>
+      <label class="checkrow"><input type="checkbox" data-id="s5"><span>Practise short-answer responses that directly address the command verb.</span></label>
+      <label class="checkrow"><input type="checkbox" data-id="s6"><span>Plan extended responses with a clear argument, paragraphs and a supported judgement.</span></label>
+      <label class="checkrow"><input type="checkbox" data-id="s7"><span>Complete past-paper questions under timed conditions and review marking guidelines.</span></label>
+    </div><p class="intro">Official syllabus and past-paper resources:</p><p><a href="https://www.nsw.gov.au/education-and-training/nesa/curriculum/hsc-exam-papers/studies-of-religion" target="_blank" rel="noopener" style="color:#8a6b13;font-weight:700">NESA Studies of Religion HSC resources ↗</a></p></div>
+  </section>
+
+  <section class="note-card">
+    <h3>🌼 Your religious tradition notebook</h3>
+    <p>Save the exact traditions your class is studying and add examples or reminders. These notes save in this browser on this device.</p>
+    <div class="case-inputs">
+      <label>Depth Study 1<input id="trad1" type="text" placeholder="Religious tradition"></label>
+      <label>Depth Study 2<input id="trad2" type="text" placeholder="Religious tradition"></label>
+      <label>Key person / school of thought<input id="person" type="text" placeholder="Name and why they matter"></label>
+    </div>
+    <div class="case-inputs"><label style="grid-column:1/-1">Revision reminders<textarea id="reminders" placeholder="Topics to revisit, examples to learn, or questions for your teacher…"></textarea></label></div>
+  </section>
+  <footer>Made for your HSC study journey · Studies of Religion edition 🌼<br>Checklist progress and notes save locally in this browser on this device.</footer>
+</main>
+<script>
+const STORAGE_KEY='sorStudyGarden2027_v1';
+const checks=[...document.querySelectorAll('input[type="checkbox"][data-id]')];
+const noteFields=['trad1','trad2','person','reminders'];
+let saved={};try{saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}catch(e){saved={}}
+checks.forEach(el=>{el.checked=!!saved[el.dataset.id];el.addEventListener('change',()=>{saved[el.dataset.id]=el.checked;persist();updateProgress()})});
+noteFields.forEach(id=>{const el=document.getElementById(id);if(el){el.value=saved[id]||'';el.addEventListener('input',()=>{saved[id]=el.value;persist()})}});
+function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(saved))}catch(e){}}
+function updateProgress(){const visible=checks.filter(c=>c.closest('.focus-card').style.display!=='none');const done=visible.filter(c=>c.checked).length,total=visible.length,pct=total?Math.round(done/total*100):0;document.getElementById('progressText').textContent=pct+'% complete';document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressCaption').textContent=done===total?'Everything ticked off — amazing work! 🌼':done+' of '+total+' checklist items completed. Keep going at your own pace!'}
+document.querySelectorAll('.focus-head').forEach(btn=>btn.addEventListener('click',()=>{const card=btn.closest('.focus-card');card.classList.toggle('closed');btn.setAttribute('aria-expanded',String(!card.classList.contains('closed')));card.querySelector('.focus-content').hidden=card.classList.contains('closed')}));
+document.getElementById('expandBtn').addEventListener('click',()=>document.querySelectorAll('.focus-card').forEach(c=>{c.classList.remove('closed');c.querySelector('.focus-content').hidden=false;c.querySelector('.focus-head').setAttribute('aria-expanded','true')}));
+document.getElementById('collapseBtn').addEventListener('click',()=>document.querySelectorAll('.focus-card').forEach(c=>{c.classList.add('closed');c.querySelector('.focus-content').hidden=true;c.querySelector('.focus-head').setAttribute('aria-expanded','false')}));
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+document.getElementById('resetBtn').addEventListener('click',()=>{if(confirm('Reset all Studies of Religion I checklist ticks and saved notes? This cannot be undone.')){saved={};checks.forEach(c=>c.checked=false);noteFields.forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});persist();updateProgress()}});
+updateProgress();
+</script>
+</body>
+</html>
